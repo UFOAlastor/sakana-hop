@@ -1,0 +1,192 @@
+:root {
+    --app-height: 100vh
+}
+
+html {
+    background: #3f80b6;
+    color: #FFF;
+    overflow: hidden;
+    font: 16px sans-serif
+}
+
+html[data-device="iphone"],
+html[data-device="ipad"],
+html[data-device="ipod"],
+html[data-device="ios"] {
+    --app-height: -webkit-fill-available
+}
+
+html[data-alpha="true"] {
+    background: none
+}
+
+html[data-alpha="true"] footer,
+html[data-alpha="true"] .ctrl-box {
+    display: none
+}
+
+html[data-is-super-vertical="true"] body {
+    box-sizing: border-box;
+    padding-bottom: 60px
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    height: var(--app-height)
+}
+
+a {
+    color: #a4c5e1;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.app {
+    display: block;
+    height: 100%
+}
+
+canvas {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    pointer-events: none
+}
+
+.single-box {
+    margin: 140px auto 0;
+    width: 200px;
+    height: 500px;
+    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none
+}
+
+.single-box .main {
+    --main-width: 300px;
+    --main-height: 300px;
+    width: var(--main-width);
+    height: var(--main-height);
+    position: absolute;
+    left: calc(200px / 2 - var(--main-width) / 2);
+    bottom: 260px;
+    cursor: pointer;
+    pointer-events: auto;
+    transform-origin: 50% 400px;
+    background: no-repeat 50% 50%;
+    background-size: cover;
+    background-image: url(sakana.png)
+}
+
+.single-box .main.chisato {
+    background-image: url(chisato.png)
+}
+
+.single-box .bed {
+    pointer-events: auto;
+    width: 160px;
+    height: 20px;
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5) no-repeat 50% 50%;
+    border-radius: 2px;
+    cursor: pointer;
+    background-image: url(blue00f4.png);
+    background-size: 20px 20px
+}
+
+.ctrl-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 4px 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column
+}
+
+.ctrl-box a {
+    float: left;
+    padding: 0 4px;
+    margin-top: 2px;
+    border-radius: 2px
+}
+
+.ctrl-box a[data-active="true"] {
+    background: #182562
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 4px 8px;
+    text-align: right
+}
+
+footer a {
+    display: block
+}
+
+footer a span {
+    opacity: .5
+}
+
+button {
+    border: 0;
+    background: #000;
+    color: #FFF;
+    font: inherit;
+    line-height: 1.4;
+    padding: 15px 20px;
+    border-radius: 4px;
+    cursor: pointer
+}
+
+.set-voice {
+    cursor: pointer
+}
+
+.set-voice.voice-mute {
+    text-decoration: line-through
+}
+
+.set-orientation-link {
+    display: none
+}
+
+[data-text]:before {
+    content: attr(data-text)
+}
+
+html[data-can-orientation="true"] .set-orientation-link {
+    display: block
+}
+
+html[data-permission-state="true"] .set-orientation-link {
+    display: none
+}
+
+@media (max-height:800px) {
+    .app {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        min-height: 600px
+    }
+}
