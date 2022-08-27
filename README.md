@@ -4,7 +4,9 @@
 
 原项目仓库：https://github.com/itorr/sakana
 
-移植：[Zander Alastor](https://github.com/UFOAlastor)
+移植者：[Zander Alastor](https://github.com/UFOAlastor)
+
+vscode插件仓库：https://github.com/UFOAlastor/sakana-hop
 
 # 简单预览
 
@@ -12,10 +14,22 @@
 
 ![show](https://github.com/itorr/sakana/raw/main/html/chisato.png)
 
+![石蒜摇.gif](https://s2.loli.net/2022/08/27/RCsWxtk67TE5vAr.gif)
+
 # 功能概况
 
+ - 支持放大缩小人物
+ - 点击人物正下方按钮切换人物
+ - 拖动人物正下方按钮移动人物
+ - 自动模式，自动摇摆
+ - 语言切换
 
-# 使用介绍
+# 已知BUG
+
+ - 人物摇摆时快速滑动窗口会导致闪烁，自动模式下尤其明显
+ - 原作品的音效无法在vscode中播放，目前去除了“静音”按钮
+
+# 问题解决
 
 >   若依赖启动失败：
 >

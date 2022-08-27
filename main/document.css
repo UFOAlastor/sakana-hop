@@ -1,7 +1,3 @@
-body {
-    overflow: hidden;
-}
-
 a {
     color: #a4c5e1;
     text-decoration: none;
@@ -14,7 +10,7 @@ a {
     display: block;
     left: 80%;
     top: 65%;
-    height: 30%;
+    height: 29%;
     width: 15%;
 }
 

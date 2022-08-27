@@ -152,46 +152,6 @@ const draw = _ => {
     const _y = y;// - Math.abs(x);
     el.style.transform = `rotate(${r}deg) translateX(${x}px) translateY(${y}px)`;
 
-    // ctx.clearRect(0, 0, width, height);
-    // ctx.save();
-
-    // ctx.strokeStyle = '#182562';
-    // ctx.lineWidth = 10;
-
-    // ctx.beginPath();
-    // ctx.translate(
-    //     width / 2,
-    //     640 // height - 160
-    // );
-    // ctx.moveTo(
-    //     0,
-    //     140
-    // );
-
-    // const cx = 0;
-    // const cy = -100;
-
-    // const n = rotatePoint(
-    //     cx,
-    //     cy,
-    //     x,
-    //     -y,
-    //     r
-    // );
-
-    // const nx = n.x;
-    // const ny = -n.y - 100;
-
-    // ctx.quadraticCurveTo(
-    //     0,
-    //     75,
-    //     nx,
-    //     ny
-    // );
-
-    // ctx.stroke();
-    // ctx.restore();
-
     return;
 };
 const loadImage = (src, onOver) => {
@@ -323,11 +283,8 @@ el.ontouchstart = e => {
     };
 };
 
-
-
 const playVoice = () => {
     if (Voices.isMute) return;
-    // console.log({ r: v.r, y: v.y })
 
     if (el.classList.contains('chisato')) {
         if (

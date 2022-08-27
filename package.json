@@ -3,6 +3,7 @@
     "displayName": "Sakana-Hop | 石蒜摇",
     "description": "石蒜摇摇乐，晃啊晃啊晃啊晃",
     "publisher": "ZanderAlastor",
+    "repository": "https://github.com/UFOAlastor/sakana-hop",
     "version": "0.1.0",
     "engines": {
         "vscode": "^1.70.0"
