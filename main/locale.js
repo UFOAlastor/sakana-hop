@@ -7,6 +7,8 @@ const LOCALE_SRC = {
     weibo: "微博",
     image: "绘",
     program: "程序",
+    sizeup: "放大",
+    sizelow: "缩小",
   },
   "en-US": {
     lang: "Language",
@@ -16,6 +18,8 @@ const LOCALE_SRC = {
     weibo: "Weibo",
     image: "Image",
     program: "Program",
+    sizeup: "Enlarge",
+    sizelow: "Reduce",
   },
   "ja_JP": {
     lang: "言語",
@@ -25,6 +29,8 @@ const LOCALE_SRC = {
     weibo: "微博",
     image: "絵",
     program: "アプリ",
+    sizeup: "拡大",
+    sizelow: "縮小",
   },
 };
 const AVAIL_LANGS = Object.keys(LOCALE_SRC).sort();

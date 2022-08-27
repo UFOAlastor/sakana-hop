@@ -59,7 +59,7 @@ class Dom {
         // const JsFile = fs.readFileSync(path.join('../main/main.html', 'utf-8')).split(/\r?\n/);
         content += '/*ext-' + this.extName + '-start*/\n';
         content += '/*ext.' + this.extName + '.ver.' + this.version + '*/\n';
-        const lines = fs.readFileSync(path.join(__dirname, '..', 'main', 'main.html'), 'utf-8').split(/\r?\n/);
+        const lines = fs.readFileSync(path.join(__dirname, '..', 'main', 'index.html'), 'utf-8').split(/\r?\n/);
         lines.forEach((line) => {
             content += "document.writeln(\"" + line.replace(/\"/g, '\'') + "\");\n";
         })

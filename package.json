@@ -1,6 +1,6 @@
 {
     "name": "sakana-hop",
-    "displayName": "Sakana Hop | 石蒜摇",
+    "displayName": "SakanaHop石蒜摇",
     "description": "石蒜摇摇乐，晃啊晃啊晃啊晃",
     "publisher": "",
     "version": "0.1.0",
@@ -10,7 +10,7 @@
     "categories": [
         "Other"
     ],
-    "icon": "./main/model/sakana.png",
+    "icon": "main/model/sakana.png",
     "keywords": [
         "石蒜",
         "莉可丽丝",
@@ -32,7 +32,7 @@
             {
                 "title": "配置",
                 "properties": {
-                    "diana-substitute.enabled": {
+                    "sakana-hop.enabled": {
                         "type": "boolean",
                         "default": true,
                         "description": "是否启动"
