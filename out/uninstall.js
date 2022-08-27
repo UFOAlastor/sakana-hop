@@ -57,8 +57,10 @@ class Uninstall {
             const htmlPath = path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'workbench.html');
             fs.writeFileSync(htmlPath, originalHtml, 'utf-8');
             // 删除文件
-            fs.unlinkSync(path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'movement.js'));
-            fs.unlinkSync(path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'main.html'));
+            fs.unlinkSync(path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'locale.js'));
+            fs.unlinkSync(path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'document.js'));
+            fs.unlinkSync(path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'document.css'));
+            fs.unlinkSync(path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'index.html'));
             fs.unlinkSync(path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'config.json'));
             removeFiles(path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'model'));
             vsHelp_1.default.showInfoRestart(this.extName + "已经卸载插件，请重新启动！")

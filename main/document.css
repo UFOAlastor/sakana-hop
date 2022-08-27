@@ -47,7 +47,7 @@ a {
 
 .app {
     display: block;
-    height: 100%
+    height: 100%;
 }
 
 canvas {
@@ -107,8 +107,6 @@ canvas {
 
 .ctrl-box {
     position: absolute;
-    bottom: 0;
-    left: 0;
     font-size: 12px;
     line-height: 20px;
     padding: 4px 4px;
@@ -126,24 +124,6 @@ canvas {
 
 .ctrl-box a[data-active="true"] {
     background: #182562
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-size: 12px;
-    line-height: 20px;
-    padding: 4px 8px;
-    text-align: right
-}
-
-footer a {
-    display: block
-}
-
-footer a span {
-    opacity: .5
 }
 
 button {
@@ -186,7 +166,6 @@ html[data-permission-state="true"] .set-orientation-link {
         position: absolute;
         top: 0;
         left: 0;
-        right: 0;
         min-height: 600px
     }
 }

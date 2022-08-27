@@ -117,8 +117,10 @@ class Dom {
             // 还原HTML
             let originalHtml = originalHtml_1.default().replace(/\s*$/, '');
             const htmlPath = path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'workbench.html');
-            fs.unlinkSync(path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'movement.js'));
-            fs.unlinkSync(path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'main.html'));
+            fs.unlinkSync(path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'locale.js'));
+            fs.unlinkSync(path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'document.js'));
+            fs.unlinkSync(path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'document.css'));
+            fs.unlinkSync(path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'index.html'));
             fs.unlinkSync(path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'config.json'));
             removeFiles(path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'model'));
             fs.writeFileSync(htmlPath, originalHtml, 'utf-8');

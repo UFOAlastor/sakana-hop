@@ -1,71 +1,49 @@
-# sakana README
+# Sakana-Hop[石蒜摇] 使用简介
 
-This is the README for your extension "sakana". After writing up a brief description, we recommend including the following sections.
+原作者：[卜卜口 itorr](https://github.com/itorr)
 
-## Features
+原项目仓库：https://github.com/itorr/sakana
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+移植：[Zander Alastor](https://github.com/UFOAlastor)
 
-For example if there is an image subfolder under your extension project workspace:
+# 简单预览
 
-\!\[feature X\]\(images/feature-x.png\)
+![show](https://github.com/itorr/sakana/raw/main/html/takina.png)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+![show](https://github.com/itorr/sakana/raw/main/html/chisato.png)
 
-## Requirements
+# 功能概况
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
 
-## Extension Settings
+# 使用介绍
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+>   若依赖启动失败：
+>
+>     - windows可尝试使用以管理者身份运行vscode
+>     - mac 请留意是否将vscode从【下载】移动到【应用程序】里
+>     - mac 可通过【检查vscode是否可以更新】来判断软件是否处于可写的硬盘中
 
-For example:
+>    删除时请注意：
+>
+>   -   先进入插件设置取消勾选“启动”
+>
+>       直接删除插件会导致注入vscode的js代码未被删除
+>
+>   -   如果已经直接删除插件，图像还存在于vscode上，请进入以下路径手动删除：
+>
+>       (旧版本vscode) C:\Users\your_id\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\code\electron-browser\workbench\
+>
+>       (新版本vscode) C:\Users\your_id\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\
+>
+>   -   文件目录下只有workbench.js和workbench.html是原始文件，其余皆为插件注入的文件
 
-This extension contributes the following settings:
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Warns 警告：
 
-## Known Issues
+> **本插件是通过修改 vscode 的 js 文件的方式运行**
+> 所以会在初次安装，或者 vscode 升级的时候，出现以下提示，请选择 【不再提示】:
+>
+> **This extension works by editting the vscode's css file.**
+> So, a warning appears while the first time to install or vscode update. U can click the [never show again] to avoid it.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+## 请勿使用该项目进行商业盈利

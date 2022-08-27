@@ -10,12 +10,12 @@ class Main {
     static watch() {
         const base = path.dirname(require.main.filename);
         const filePath = path.join(base, 'vs', 'code', 'electron-sandbox', 'workbench', 'workbench.js');
-        const extName = "diana-substitute";
+        const extName = "sakana-hop";
         let DomApi = new Dom_1.Dom(extName, filePath, version_1.default, extName);
         return vscode.workspace.onDidChangeConfiguration(() => DomApi.install());
     }
     static uninstall() {
-        const extName = "diana-substitute";
+        const extName = "sakana-hop";
         let uninstallApi = new Uninstall_1.Uninstall(extName);
         uninstallApi.uninstall();
     }

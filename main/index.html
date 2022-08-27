@@ -1,27 +1,49 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sakana! - 石蒜虚拟器 - 神奇海螺试验场</title>
     <meta name="description" content="Lycoris Recoil,リコリス・リコイル,莉可丽丝,石蒜虚拟器,锦木千束,錦木千束,井之上泷奈,井ノ上たきな,神奇海螺试验场">
-    <link rel="stylesheet" href="document.css">
-    <link rel="apple-touch-icon" href="sakana.png">
-    <link rel="prefetch" href="chisato.png">
+    <link rel="stylesheet" href="./document.css">
+    <link rel="apple-touch-icon" href="./model/sakana.png">
+    <link rel="prefetch" href="./model/chisato.png">
 </head>
+
 <body>
     <div class="app">
         <canvas></canvas>
         <div class="single-box">
             <div class="main"></div>
             <div class="bed"></div>
+
+            <div class="ctrl-box">
+                <a class="set-orientation-link" onclick="setOrientationListener()" data-locale="gyroscope">陀螺仪</a>
+                <a class="set-voice" onclick="toggleVoiceMute()" data-locale="mute">静音</a>
+                <a class="trigger-magic-link" onclick="triggerMagic()" data-locale="magic">自动</a>
+                <a class="locale-switch" onclick="switchLocale()" data-locale="lang">语言</a>
+            </div>
         </div>
-    </div>
-    <div class="ctrl-box">
-        <a class="set-orientation-link" onclick="setOrientationListener()" data-locale="gyroscope">陀螺仪</a>
-        <a class="set-voice" onclick="toggleVoiceMute()" data-locale="mute">静音</a>
-        <a class="trigger-magic-link" onclick="triggerMagic()" data-locale="magic">自动</a>
-        <a class="locale-switch" onclick="switchLocale()" data-locale="lang">语言</a>
+        <script>
+            var odiv = document.getElementsByClassName('bed');
+            odiv.onmousedown = function (ev) {
+                var event = window.event || ev;
+                var dx = event.clientX - odiv.offsetLeft;
+                var dy = event.clientY - odiv.offsetTop;
+                console.log(event);
+                console.log(dy);
+                document.onmousemove = function (ev) {
+                    var event = window.event || ev;
+                    odiv.style.left = event.clientX - dx + 'px';
+                    odiv.style.top = event.clientY - dy + 'px';
+                }
+                document.onmouseup = function () {
+                    document.onmousemove = null;
+                    document.onmouseup = null;
+                }
+            }
+        </script>
     </div>
     <!-- <footer>
         <a href="/" target="_blank">lab</a>
@@ -39,4 +61,5 @@
     <script src="document.js"></script>
     <script src="locale.js"></script>
 </body>
+
 </html>
