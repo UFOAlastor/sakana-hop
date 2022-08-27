@@ -29,6 +29,7 @@
         <script>
             var odiv = document.querySelector('.app');
             document.querySelector('.bed').onmousedown = function (ev) {
+                var flag = 0;
                 var event = window.event || ev;
                 var dx = event.clientX - odiv.offsetLeft;
                 var dy = event.clientY - odiv.offsetTop;
@@ -36,10 +37,14 @@
                     var event = window.event || ev;
                     odiv.style.left = event.clientX - dx + 'px';
                     odiv.style.top = event.clientY - dy + 'px';
+                    flag = 1;
                 }
                 document.onmouseup = function () {
                     document.onmousemove = null;
                     document.onmouseup = null;
+                    if (!flag) {
+                        switchValue();
+                    }
                 }
             }
         </script>

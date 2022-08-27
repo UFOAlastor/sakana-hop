@@ -448,11 +448,11 @@ const switchValue = _ => {
     }
 }
 
-document.querySelector('.bed').addEventListener('click', e => {
-    e.preventDefault();
+// document.querySelector('.bed').addEventListener('click', e => {
+//     e.preventDefault();
 
-    switchValue();
-})
+//     switchValue();
+// })
 
 
 window.addEventListener('resize', resize);

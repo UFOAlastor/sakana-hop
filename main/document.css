@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 a {
     color: #a4c5e1;
     text-decoration: none;
@@ -5,6 +9,7 @@ a {
 }
 
 .app {
+    z-index: 999;
     position:absolute;
     display: block;
     left: 80%;
@@ -56,6 +61,7 @@ a {
     background: no-repeat 50% 50%;
     border-radius: 2px;
     cursor: pointer;
+    opacity: 0.5;
     background-image: url(./model/blue00f4.png);
     background-size: 30px 30px;
 }
