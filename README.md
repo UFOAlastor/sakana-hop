@@ -71,17 +71,17 @@ E:
 > - 其中workbench.js内第三行起由注释包裹部分也是注入的数据，若依旧存在需要手动删除
 
 E:
-> - Firstly, uncheck "start" in plug-in settings
+> - Firstly, uncheck "start" in extension settings
 >
->   Deleting the plug-in directly will cause the JS code injected into vscode not to be deleted!
+>   Deleting the extension directly will cause the JS code injected into vscode not to be deleted!
 >
-> - if the plug-in has been deleted directly and the image still exists on vscode, please enter the following path to delete it manually:
+> - if the extension has been deleted directly and the image still exists on vscode, please enter the following path to delete it manually:
 >
 >   (old version vscode) C: \ users \ your_ id\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\code\electron-browser\workbench\
 >
 >   (new version vscode) C: \ users \ your_ id\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\
 >
-> - in the file directory, only workbench.js and workbench.html are original files, and the rest are files injected by plug-ins
+> - in the file directory, only workbench.js and workbench.html are original files, and the rest are files injected by extensions
 > - the part wrapped by comments in the third line of workbench.js is also the injected data. If it still exists, it needs to be deleted manually
 >
 
