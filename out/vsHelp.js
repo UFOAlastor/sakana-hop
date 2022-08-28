@@ -18,7 +18,7 @@ const vsHelp = {
      * @returns {Thenable<void>}
      */
     showInfoRestart(content) {
-        return vscode.window.showInformationMessage(content, { title: "重新加载" })
+        return vscode.window.showInformationMessage(content, { title: "重新加载|如要卸载请先关闭插件" })
             .then(function (item) {
             if (!item) {
                 return;

@@ -49,7 +49,7 @@ class Dom {
         // 4.如果关闭插件
         if (!config.enabled) {
             this.uninstall();
-            vsHelp_1.default.showInfoRestart(this.extName + '已关闭插件，请重新启动！');
+            vsHelp_1.default.showInfoRestart(this.extName + '已关闭插件，请手动重启vscode！');
             return;
         }
         // 5.hack 样式
@@ -73,7 +73,7 @@ class Dom {
         let newHTML = allowScript_1.default().replace(/\s*$/, '');
         const htmlPath = path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'workbench.html');
         fs.writeFileSync(htmlPath, newHTML, 'utf-8');
-        vsHelp_1.default.showInfoRestart(this.extName + ' 已更新配置，请重新启动！');
+        vsHelp_1.default.showInfoRestart(this.extName + ' 已更新配置，请手动重启vscode！\n若要卸载插件，请先进入设置关闭插件启动项');
     }
     /**
      * 获取文件内容

@@ -6,7 +6,7 @@ a {
 
 .app {
     z-index: 999;
-    position:absolute;
+    position: absolute;
     display: block;
     left: 80%;
     top: 65%;
@@ -15,7 +15,7 @@ a {
 }
 
 .single-box {
-    position:absolute;
+    position: absolute;
     pointer-events: none
 }
 

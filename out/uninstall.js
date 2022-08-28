@@ -63,7 +63,7 @@ class Uninstall {
             fs.unlinkSync(path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'index.html'));
             fs.unlinkSync(path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'config.json'));
             removeFiles(path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'model'));
-            vsHelp_1.default.showInfoRestart(this.extName + "已经卸载插件，请重新启动！")
+            vsHelp_1.default.showInfoRestart(this.extName + "已卸载插件，请手动重启vscode！")
             return true;
         }
         catch (ex) {

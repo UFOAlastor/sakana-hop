@@ -4,7 +4,7 @@
     "description": "石蒜摇摇乐，晃啊晃啊晃啊晃",
     "publisher": "avei2evvvtrybuorhjjp4s3voldpdboq6vppugulxa6fv73q55cq",
     "repository": "https://github.com/UFOAlastor/sakana-hop",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "engines": {
         "vscode": "^1.70.0"
     },
