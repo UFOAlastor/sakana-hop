@@ -10,9 +10,8 @@ if (
 
 htmlEl.setAttribute('data-device', device)
 
-
 const sticky = 0.1;
-let inertia = 0.08;
+let inertia = 0.04;
 const maxR = 60;
 const maxY = 110;
 const minY = -maxY;
@@ -29,22 +28,10 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
     }
 });
 
-// 透明背景
-if (params.alpha) {
-    htmlEl.setAttribute('data-alpha', params.alpha);
-}
-
-// 自定义背景色
-if (params.background) {
-    htmlEl.setAttribute('data-alpha', true);
-    htmlEl.style.background = params.background;
-}
-
 // 自定义惯性
 if (params.inertia) {
     inertia = +params.inertia;
 }
-
 
 const Values = {
     chisato: {
@@ -146,10 +133,8 @@ const rotatePoint = (cx, cy, x, y, angle) => {
 
 
 const draw = _ => {
-
-    let { r, y, t, w, d } = v;
+    let { r, y } = v;
     const x = r * 1;
-    const _y = y;// - Math.abs(x);
     el.style.transform = `rotate(${r}deg) translateX(${x}px) translateY(${y}px)`;
 
     return;
@@ -414,7 +399,6 @@ const switchValue = _ => {
 
 window.addEventListener('resize', resize);
 
-
 // pic size enlarge or reduce
 function sizeEnlarge () {
     var aim = document.getElementById("main");
@@ -437,41 +421,3 @@ function sizeReduce () {
     var ori = parseInt(getComputedStyle(aim).getPropertyValue('width'));
     aim.style['width'] = ori - 20 + "px";
 }
-
-
-console.log(
-    '%c錦木千束 https://lab.magiconch.com/sakana/?v=chisato',
-    'color:#FED;background-color:#C34;padding:2px 4px;',
-);
-console.log(
-    '%c井ノ上たきな https://lab.magiconch.com/sakana/?v=takina',
-    'color:#CCC;background-color:#235;padding:2px 4px;',
-);
-
-console.log(
-    '%c永续超慢速%chttps://lab.magiconch.com/sakana/?inertia=0.001&decay=1',
-    'color:#FED;background-color:#C34;padding:2px 4px;',
-    'color:#CCC;background-color:#235;padding:2px 4px;',
-);
-
-console.log(
-    '绘: %c大伏アオ %c已取得在网页中使用的非商用授权',
-    'font-weight:bold',
-    'color:#C34',
-
-    'https://twitter.com/blue00f4/status/1551887529615687680',
-    'https://twitter.com/blue00f4/status/1552066743853813760',
-);
-
-console.log(
-    '微博',
-    'https://weibo.com/1197780522/M2xbREtGI',
-);
-console.log(
-    'Github',
-    'https://github.com/itorr/sakana',
-);
-console.log(
-    '问题反馈',
-    'https://github.com/itorr/sakana/issues',
-);

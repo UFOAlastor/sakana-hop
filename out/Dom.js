@@ -73,7 +73,7 @@ class Dom {
         let newHTML = allowScript_1.default().replace(/\s*$/, '');
         const htmlPath = path.join(path.dirname(require.main.filename), 'vs', 'code', 'electron-sandbox', 'workbench', 'workbench.html');
         fs.writeFileSync(htmlPath, newHTML, 'utf-8');
-        vsHelp_1.default.showInfoRestart(this.extName + ' 已更新配置，请手动重启vscode！ ```````` 若要卸载插件，请先进入设置关闭插件启动项');
+        vsHelp_1.default.showInfoRestart(this.extName + ' 重新加载后请再次手动重启vscode！ ```````````````````` 若要卸载插件，请先进入设置关闭插件启动项！');
     }
     /**
      * 获取文件内容

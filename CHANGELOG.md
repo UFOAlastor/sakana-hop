@@ -1,5 +1,9 @@
 # Change Log
 
+ - v0.1.3
+    调整降低惯性，减轻闪屏
+    Reduce inertia to reduce flicker
+
  - v0.1.2
     微调提醒项
     Fix information
